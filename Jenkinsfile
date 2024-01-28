@@ -10,7 +10,7 @@ node{
 	{
 	sh "${mavenhome}/bin/mvn clean package"
 	}
-	
+/*	
 	stage('Report Generation')
 	{
 	sh "${mavenhome}/bin/mvn clean sonar:sonar"
@@ -27,7 +27,7 @@ node{
     	sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@3.84.6.31:/opt/apache-tomcat-9.0.83/webapps/"
 	}
 	}
-	
+*/	
 	stage('Send Email Notification')
 	{
 	emailext body: '''Build Over..!
